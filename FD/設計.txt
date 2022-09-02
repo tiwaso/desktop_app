@@ -1,0 +1,16 @@
+■フォルダ構成
+FD:設計
+Python:
+　- main.py
+  - kaikeydrive.kv
+  - musicplayer
+    - musicplayer.py
+    - file.py
+    - play.py
+    - stop.py
+    - volume.py
+    - clock.py
+    - visualize.py
+  -image
+    - ***.png
+TEST:テストコード
