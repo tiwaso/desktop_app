@@ -2,38 +2,49 @@
     file_name: file_name
     orientation:"vertical"
 
-    Label:
-        id: file_name
-        size_hint: 1, 1
-        text: "Hello World"
-        center: root.center
+    BoxLayout:
+        size_hint: 1, 0.8
+        canvas:
+            Rectangle:
+                source: "image/back.jpg"
+                pos: self.pos
+                size: self.size
+        Label:
+            id: file_name
+            size_hint: 1, 1
+            font_size: 50
+            text: "Hello World"
+            center: root.center
 
     BoxLayout:
+        size_hint: 1, 0.1
+
         Label:
-            size_hint: 0.1, 0.2
+            size_hint: 0.1, 1
             text: '0:00/0:00'
         Slider:
-            size_hint: 0.7, 0.2
+            size_hint: 0.7, 1
             max: 100
             value: 0
             on_value: root.clock()
     BoxLayout:
-        spacing: 20
+        size_hint: 1, 0.1
+
         Button:
-            size_hint: 0.1, 0.2
-            text: "ダイアログ"
+            size_hint: 0.1, 1
+            text: "ファイル選択"
             on_press: root.file()
         Button:
-            size_hint: 0.1, 0.2
+            size_hint: 0.1, 1
             text: "再生"
             on_press: root.play()
         Button:
-            size_hint: 0.1, 0.2
+            size_hint: 0.1, 1
             text: "停止"
             on_press: root.stop()
         Label:
-            size_hint: 0.1, 0.2
+            size_hint: 0.1, 1
             text: '音量'
         Slider:
-            size_hint: 0.4, 0.2
+            size_hint: 0.4, 1
             on_value: root.volume()
